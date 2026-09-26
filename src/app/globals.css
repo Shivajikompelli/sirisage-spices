@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-parchment text-ink;
+  /* Cream backgrounds over pure white — per Visual Language, slide 03 */
+}
