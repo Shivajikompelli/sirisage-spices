@@ -24,12 +24,14 @@ export const CONTACT = {
   officeLocation: "Hyderabad, India",
 } as const;
 
+// One-page experience: every route except /spices lives on the home page
+// as a section. NAV_LINKS doubles as the header scroll-spy map.
 export const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/spices", label: "Spices" },
-  { href: "/about", label: "About Us" },
-  { href: "/testimonials", label: "Testimonials" },
-  { href: "/contact", label: "Contact Us" },
+  { href: "/", label: "Home", sectionId: "home" },
+  { href: "/spices", label: "Spices", sectionId: "" },
+  { href: "/#about", label: "About Us", sectionId: "about" },
+  { href: "/#testimonials", label: "Testimonials", sectionId: "testimonials" },
+  { href: "/#contact", label: "Contact Us", sectionId: "contact" },
 ] as const;
 
 // Key commercial rule from the deck: no public pricing, enquiry-led selling only.

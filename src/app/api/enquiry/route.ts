@@ -4,8 +4,7 @@ import { CONTACT } from "@/lib/constants";
 import type { EnquiryPayload } from "@/types/spice";
 
 // No database — every enquiry is just relayed straight to the team's inbox.
-// Requires RESEND_API_KEY in .env.local (see README > Environment variables).
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || "re_dummy_for_build");
 
 export async function POST(req: NextRequest) {
   const body = (await req.json()) as EnquiryPayload;

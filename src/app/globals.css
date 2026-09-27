@@ -2,7 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  @apply bg-parchment text-ink;
-  /* Cream backgrounds over pure white — per Visual Language, slide 03 */
+  @apply bg-parchment text-ink antialiased;
+}
+
+::selection {
+  background: rgba(198, 145, 62, 0.35);
+}
+
+/* Subtle paper-grain texture used on banner bands */
+.texture-paper {
+  background-image: radial-gradient(
+    rgba(36, 66, 39, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
 }
