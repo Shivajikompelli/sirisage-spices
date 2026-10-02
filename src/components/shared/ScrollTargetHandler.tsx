@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 
 /**
- * When a header anchor is clicked from another route (e.g. /spices), the
+ * When a header anchor is clicked from another route, the
  * Header stores the target section and navigates home. This component picks
  * it up on mount and smooth-scrolls to the section.
  */

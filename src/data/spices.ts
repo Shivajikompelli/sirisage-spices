@@ -21,7 +21,7 @@ export const spices: Spice[] = [
     slug: "turmeric-powder",
     name: "Turmeric Powder",
     tagline: "Golden, earthy, deeply aromatic",
-    category: "ground-spices",
+    category: "best-sellers",
     origin: "India",
     format: "Ground / packed to requirement",
     quality: "Sourced from trusted farms",

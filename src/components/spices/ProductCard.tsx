@@ -16,14 +16,14 @@ export function ProductCard({ spice, delay = 0 }: { spice: Spice; delay?: number
 
   return (
     <div
-      className="group relative flex flex-col rounded-card border border-ink/10 bg-white transition-all duration-500 ease-out hover:-translate-y-1.5 hover:shadow-[0_18px_40px_-18px_rgba(36,66,39,0.35)]"
+      className="group relative flex h-full flex-col overflow-hidden rounded-card border border-ink/10 bg-white transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_18px_40px_-18px_rgba(36,66,39,0.35)]"
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Image */}
       <Link
-        href={`/spices/product/${spice.slug}`}
-        className="relative block aspect-square overflow-hidden rounded-t-card bg-[#F4EFE6]"
-        aria-label={`View ${spice.name}`}
+        href={`/#${spice.category}`}
+        className="relative block aspect-square overflow-hidden bg-[#F4EFE6]"
+        aria-label={`Browse ${spice.category.replace("-", " ")} spices`}
       >
         {spice.image ? (
           <Image
@@ -41,7 +41,7 @@ export function ProductCard({ spice, delay = 0 }: { spice: Spice; delay?: number
         {spice.newArrival && (
           <span className="absolute left-3 top-3 rounded-full bg-terracotta px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-parchment shadow-sm">
             New
-          </span>
+          </span> 
         )}
         {spice.bestSeller && (
           <span className="absolute left-3 top-3 rounded-full bg-forest px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-parchment shadow-sm">
@@ -68,23 +68,23 @@ export function ProductCard({ spice, delay = 0 }: { spice: Spice; delay?: number
       </button>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-4">
-        <Link href={`/spices/product/${spice.slug}`} className="block">
-          <h3 className="font-serif text-base leading-snug text-ink transition-colors group-hover:text-forest">
+      <div className="flex flex-1 flex-col p-5">
+        <Link href={`/#${spice.category}`} className="block">
+          <h3 className="font-serif text-xl leading-snug text-ink transition-colors group-hover:text-forest">
             {spice.name}
           </h3>
           <p className="mt-0.5 text-xs text-ink/60">{category?.name ?? spice.descriptors.join(" • ")}</p>
         </Link>
 
-        <div className="mb-4 mt-2 flex items-center gap-1.5">
+        <div className="mt-3 flex items-center gap-1.5">
           <StarRating value={rating.rating} />
           <span className="text-[11px] text-ink/50">({rating.count})</span>
         </div>
 
         {/* CTA — enquiry-led model: no cart, no public pricing */}
         <Link
-          href={`/spices/product/${spice.slug}`}
-          className="mt-auto inline-flex items-center justify-center gap-1.5 rounded-card bg-forest px-4 py-2.5 text-xs font-medium text-parchment transition-all duration-300 hover:bg-forest/90 hover:shadow-md"
+          href={`/contact?product=${spice.slug}`}
+          className="mt-5 inline-flex w-full items-center justify-center gap-1.5 rounded-card bg-forest px-4 py-3 text-sm font-medium text-parchment transition-all duration-300 hover:bg-forest/90 hover:shadow-md"
         >
           Enquire Now
           <Icon

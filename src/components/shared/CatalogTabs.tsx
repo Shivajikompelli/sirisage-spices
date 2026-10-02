@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const TABS = [
-  { href: "/spices", label: "All Spices" },
-  { href: "/spices/new-products", label: "New Products" },
-  { href: "/spices/best-sellers", label: "Best Sellers" },
+  { href: "/#whole-spices", label: "Whole Spices" },
+  { href: "/#best-sellers", label: "Best Sellers" },
+  { href: "/#new-launches", label: "New Launches" },
+  { href: "/#seeds-herbs", label: "Seeds & Herbs" },
 ];
 
 /** Catalog view switcher shared by the spices pages. */

@@ -8,23 +8,23 @@ import { Reveal } from "@/components/shared/Reveal";
 /** Featured Categories — the row of circular spice tiles from the reference. */
 export function CategoryCircles() {
   return (
-    <section className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+    <section className="mx-auto max-w-6xl px-4 py-5 md:py-6">
       <Reveal>
         <h2 className="text-center font-serif text-3xl text-ink md:text-4xl">
           Featured Categories
         </h2>
       </Reveal>
 
-      <div className="mt-10 grid grid-cols-3 gap-x-4 gap-y-8 sm:grid-cols-5 lg:grid-cols-6">
+      <div className="mx-auto mt-4 grid max-w-3xl grid-cols-2 gap-x-3 gap-y-4 sm:grid-cols-4">
         {categories.map((category, i) => {
           const visual = CATEGORY_VISUALS[category.slug];
           return (
             <Reveal key={category.slug} delay={i * 80}>
               <Link
-                href={`/spices/${category.slug}`}
+                href={`#${category.slug}`}
                 className="group flex flex-col items-center gap-3"
               >
-                <span className="relative block h-20 w-20 overflow-hidden rounded-full border border-parchment-border shadow-sm transition-all duration-500 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_14px_30px_-12px_rgba(36,66,39,0.4)] sm:h-24 sm:w-24">
+                <span className="relative block h-16 w-16 overflow-hidden rounded-full border border-parchment-border/50 shadow-sm transition-all duration-500 ease-out group-hover:-translate-y-1.5 group-hover:shadow-[0_14px_30px_-12px_rgba(36,66,39,0.4)] sm:h-20 sm:w-20">
                   {visual.image ? (
                     <Image
                       src={visual.image}

@@ -14,7 +14,7 @@ export function CategoryChips({ active }: { active?: string }) {
         return (
           <Link
             key={category.slug}
-            href={`/spices/${category.slug}`}
+            href={`/#${category.slug}`}
             className="group flex flex-col items-center gap-1.5"
           >
             <span

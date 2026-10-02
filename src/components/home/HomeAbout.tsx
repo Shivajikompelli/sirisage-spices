@@ -9,7 +9,7 @@ import { BRAND } from "@/lib/constants";
 export function HomeAbout() {
   return (
     <section id="about" className="texture-paper scroll-mt-20 bg-parchment-subtle">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
         <div className="grid items-center gap-10 lg:grid-cols-2">
           {/* Photo with accent frame */}
           <Reveal>

@@ -11,8 +11,8 @@ const SOCIALS: { icon: "facebook" | "instagram" | "whatsapp"; href: string; labe
 
 export function Footer() {
   return (
-    <footer className="bg-forest text-parchment">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-6 py-10 md:flex-row">
+    <footer className="bg-forest text-parchment texture-paper">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-8 px-4 py-7 md:flex-row">
         {/* Brand */}
         <Link href="/" className="flex items-center gap-3" aria-label={`${BRAND.name} home`}>
           <Image
@@ -38,7 +38,7 @@ export function Footer() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-parchment/85 transition-colors hover:text-saffron"
+              className="text-parchment/80 transition-colors hover:text-white"
             >
               {link.label}
             </Link>
@@ -47,7 +47,7 @@ export function Footer() {
 
         {/* Socials */}
         <div className="flex items-center gap-3">
-          <span className="text-sm text-parchment/85">Follow Us</span>
+          <span className="text-sm text-parchment/80">Follow Us</span>
           {SOCIALS.map(({ icon, href, label }) => (
             <a
               key={icon}
@@ -55,7 +55,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-parchment/25 text-parchment transition-all duration-300 hover:-translate-y-0.5 hover:border-saffron hover:text-saffron"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-parchment/30 text-parchment transition-all duration-300 hover:-translate-y-0.5 hover:border-parchment hover:bg-leaf hover:text-white"
             >
               <Icon name={icon} className="h-4 w-4" />
             </a>
@@ -63,8 +63,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-parchment/15">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-6 py-4 text-xs text-parchment/70 md:flex-row">
+      <div className="border-t border-parchment/20">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-2 px-4 py-4 text-xs text-parchment/70 md:flex-row">
           <p>
             © {new Date().getFullYear()} {BRAND.legalName}. All rights reserved.
           </p>

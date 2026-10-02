@@ -15,7 +15,7 @@ const INFO_ITEMS: { icon: IconName; label: string; value: string; href?: string 
 export function HomeContact() {
   return (
     <section id="contact" className="scroll-mt-20 bg-parchment">
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
         <Reveal>
           <div className="text-center">
             <span className="text-xs font-medium uppercase tracking-[0.2em] text-saffron">

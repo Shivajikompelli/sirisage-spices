@@ -7,9 +7,9 @@ import { CONTACT } from "@/lib/constants";
 /** Final call-to-action band before the footer. */
 export function HomeCta() {
   return (
-    <section className="px-6 pb-20">
+    <section>
       <Reveal y={36}>
-        <div className="relative mx-auto max-w-6xl overflow-hidden rounded-card bg-gradient-to-br from-forest via-forest to-[#1a3120] px-8 py-14 text-center text-parchment shadow-[0_30px_70px_-30px_rgba(36,66,39,0.7)] md:py-16">
+        <div className="relative w-full overflow-hidden bg-gradient-to-br from-forest via-forest to-[#1a3120] px-8 py-10 text-center text-parchment shadow-[0_30px_70px_-30px_rgba(36,66,39,0.7)] md:py-12">
           {/* Ambient glow orbs — drift in opposite directions */}
           <Parallax
             speed={-0.1}
@@ -41,7 +41,7 @@ export function HomeCta() {
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href="/spices"
+                href="/#spices"
                 className="group inline-flex items-center gap-2 rounded-card bg-parchment px-7 py-3.5 text-sm font-medium text-forest transition-all duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-lg"
               >
                 Browse Catalog

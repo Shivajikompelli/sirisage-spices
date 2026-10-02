@@ -7,11 +7,6 @@ import { Reveal } from "@/components/shared/Reveal";
 import { Parallax } from "@/components/shared/Parallax";
 import { buildWhatsAppLink } from "@/lib/enquiry";
 
-const FLOAT_CHIPS = [
-  { label: "Farm Direct", className: "left-3 top-8", delay: "0s" },
-  { label: "Lab Tested", className: "right-3 top-1/3", delay: "1.3s" },
-  { label: "Sealed Fresh", className: "left-3 bottom-16", delay: "2.6s" },
-];
 
 const FEATURES = [
   {
@@ -50,7 +45,7 @@ export function HomeVideoShowcase() {
 
   return (
     <section className="texture-paper bg-parchment-subtle">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:py-24 lg:grid-cols-12">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-10 md:py-14 lg:grid-cols-12">
         {/* Video frame — native 9:16 portrait */}
         <Reveal className="lg:col-span-5" y={36}>
           <div className="relative mx-auto w-[min(72vw,300px)]">
@@ -66,7 +61,7 @@ export function HomeVideoShowcase() {
             <div className="relative aspect-[9/16] overflow-hidden rounded-card border border-parchment-border bg-ink shadow-xl">
               <video
                 ref={videoRef}
-                src="/images/videos/vid_1.mp4"
+                src="/images/videos/vid_2.mp4"
                 autoPlay
                 loop
                 muted
@@ -96,19 +91,6 @@ export function HomeVideoShowcase() {
                   </span>
                 </button>
               </div>
-
-              {/* Floating chips */}
-              {FLOAT_CHIPS.map((chip) => (
-                <div
-                  key={chip.label}
-                  className={`animate-float-slow absolute z-10 hidden sm:block ${chip.className}`}
-                  style={{ animationDelay: chip.delay }}
-                >
-                  <span className="rounded-card bg-parchment/90 px-2.5 py-1 text-[11px] font-medium text-forest shadow-md backdrop-blur-sm">
-                    {chip.label}
-                  </span>
-                </div>
-              ))}
             </div>
           </div>
         </Reveal>
@@ -148,7 +130,7 @@ export function HomeVideoShowcase() {
           <Reveal delay={280}>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
-                href="/spices"
+                href="/#spices"
                 className="inline-flex items-center justify-center rounded-card border border-forest px-6 py-3 text-sm font-medium text-forest transition-colors hover:bg-forest/5"
               >
                 Browse Catalog

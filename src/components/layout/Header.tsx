@@ -12,7 +12,7 @@ import { Icon } from "@/components/shared/Icon";
  * - Shrinks and gains a shadow once you scroll
  * - Top progress bar tracks page reading position
  * - Scroll-spy highlights the nav item of the section in view
- * - Anchor links smooth-scroll to home sections; /spices is a real route
+ * - Anchor links smooth-scroll to home sections
  */
 export function Header() {
   const pathname = usePathname();
@@ -83,8 +83,7 @@ export function Header() {
   );
 
   const isActive = (link: (typeof NAV_LINKS)[number]) => {
-    if (link.sectionId) return onHomePage && activeSection === link.sectionId;
-    return pathname.startsWith(link.href);
+    return onHomePage && activeSection === link.sectionId;
   };
 
   return (
@@ -103,7 +102,7 @@ export function Header() {
       />
 
       <div
-        className={`flex items-center justify-between gap-4 px-6 transition-all duration-500 md:px-12 lg:px-20 xl:px-28 ${
+        className={`flex items-center justify-between gap-4 px-4 transition-all duration-500 md:px-8 lg:px-12 xl:px-16 ${
           scrolled ? "py-2" : "py-3.5"
         }`}
       >

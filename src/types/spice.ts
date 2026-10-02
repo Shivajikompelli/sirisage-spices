@@ -1,10 +1,8 @@
 export type CategorySlug =
   | "whole-spices"
-  | "ground-spices"
-  | "blends-masalas"
   | "seeds-herbs"
-  | "organic-spices"
-  | "seasonings";
+  | "best-sellers"
+  | "new-launches";
 
 export interface Category {
   slug: CategorySlug;
@@ -13,7 +11,7 @@ export interface Category {
 }
 
 export interface Spice {
-  slug: string;          // used in /spices/product/[slug]
+  slug: string;          // used as a stable product identifier
   name: string;           // e.g. "Green Cardamom"
   tagline: string;        // e.g. "A timeless aroma from India"
   category: CategorySlug;

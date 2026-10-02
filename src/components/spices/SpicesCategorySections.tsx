@@ -65,7 +65,7 @@ export function SpicesCategorySections() {
             </div>
 
             <div
-              className={`relative flex flex-col items-start gap-3 px-8 py-9 md:flex-row md:items-center md:justify-between ${
+              className={`relative flex flex-col items-start gap-3 px-8 py-7 md:flex-row md:items-center md:justify-between ${
                 section.photoSide === "left" ? "lg:pl-64" : "lg:pr-64"
               }`}
             >

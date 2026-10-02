@@ -12,7 +12,7 @@ export function HomeTestimonials() {
       id="testimonials"
       className="texture-paper scroll-mt-20 bg-parchment-subtle"
     >
-      <div className="mx-auto max-w-6xl px-6 py-16 md:py-20">
+      <div className="mx-auto max-w-6xl px-4 py-10 md:py-14">
       <Reveal>
         <h2 className="text-center font-serif text-3xl text-ink md:text-4xl">
           Spices that Bring People Together
@@ -51,7 +51,7 @@ export function HomeTestimonials() {
       <Reveal delay={200}>
         <div className="mt-9 text-center">
           <Link
-            href="/spices"
+            href="/#spices"
             className="inline-flex items-center gap-2 rounded-card bg-forest px-7 py-3 text-sm font-medium text-parchment shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest/90"
           >
             Explore Our Spices

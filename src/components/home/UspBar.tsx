@@ -6,7 +6,7 @@ import { USP_ITEMS } from "@/lib/visuals";
 export function UspBar() {
   return (
     <section className="border-y border-parchment-border bg-white/70">
-      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 px-6 py-9 sm:grid-cols-4">
+      <div className="mx-auto grid max-w-6xl grid-cols-2 gap-y-5 px-4 py-6 sm:grid-cols-4">
         {USP_ITEMS.map((item, i) => (
           <Reveal key={item.label} delay={i * 90}>
             <div className="flex flex-col items-center gap-2.5 text-center">

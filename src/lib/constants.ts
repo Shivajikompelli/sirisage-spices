@@ -20,15 +20,15 @@ export const COLORS = {
 // Contact / enquiry channels (slide 09 — Contact & Conversion)
 export const CONTACT = {
   email: "enquiry@sirisage.com",
-  whatsappNumber: "91XXXXXXXXXX", // replace with real number, no + or spaces
+  whatsappNumber: "+91 9876543210", // replace with real number, no + or spaces
   officeLocation: "Hyderabad, India",
 } as const;
 
-// One-page experience: every route except /spices lives on the home page
+// One-page experience: navigation points to sections on the home page.
 // as a section. NAV_LINKS doubles as the header scroll-spy map.
 export const NAV_LINKS = [
   { href: "/", label: "Home", sectionId: "home" },
-  { href: "/spices", label: "Spices", sectionId: "" },
+  { href: "/#spices", label: "Spices", sectionId: "spices" },
   { href: "/#about", label: "About Us", sectionId: "about" },
   { href: "/#testimonials", label: "Testimonials", sectionId: "testimonials" },
   { href: "/#contact", label: "Contact Us", sectionId: "contact" },

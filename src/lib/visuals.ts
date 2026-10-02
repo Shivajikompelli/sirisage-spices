@@ -2,7 +2,7 @@ import type { CategorySlug } from "@/types/spice";
 import type { IconName } from "@/components/shared/Icon";
 
 /**
- * Visual mapping for the six catalog categories. Categories with real
+ * Visual mapping for the four catalog categories. Categories with real
  * photography use `image`; the rest render an illustrated `art` tile so
  * nothing ever shows a broken image.
  */
@@ -10,12 +10,10 @@ export const CATEGORY_VISUALS: Record<
   CategorySlug,
   { image?: string; art: IconName; blurb: string }
 > = {
-  "whole-spices": { image: "/images/spices/black-pepper.jpg", art: "anise", blurb: "Intact buds & seeds, full essential oils" },
-  "ground-spices": { image: "/images/spices/turmeric-powder.jpg", art: "mound", blurb: "Stone-ground lots, vivid colour & aroma" },
-  "blends-masalas": { art: "mortar", blurb: "Balanced masalas blended to your recipe" },
+  "whole-spices": { image: "/images/spices/black-pepper.jpg", art: "anise", blurb: "Intact buds and seeds with full essential oils" },
+  "best-sellers": { image: "/images/spices/turmeric-powder.jpg", art: "mound", blurb: "Our most frequently requested spices" },
+  "new-launches": { image: "/images/homeScreen/saffron.png", art: "mortar", blurb: "Recently added to the range" },
   "seeds-herbs": { image: "/images/spices/cumin-seeds.jpg", art: "sprout", blurb: "Cleaned seeds & dried herbs, 99% purity" },
-  "organic-spices": { art: "leaf", blurb: "Certified organic lots from partner farms" },
-  seasonings: { art: "shaker", blurb: "Ready-to-use seasonings for food brands" },
 };
 
 /** Trust bar under the home hero — mirrors the reference mockup. */

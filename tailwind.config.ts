@@ -10,6 +10,8 @@ const config: Config = {
         "parchment-border": "#EAE3D6",
         cream: "#F0E9D8",
         forest: "#244227",
+        leaf: "#41AB5D",
+        evergreen: "#238B45",
         olive: "#696F41",
         terracotta: "#B15B38",
         saffron: "#C6913E",

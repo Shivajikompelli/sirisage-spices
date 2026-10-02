@@ -11,7 +11,7 @@ export function FeaturedProducts() {
     .slice(0, 4);
 
   return (
-    <section className="mx-auto max-w-6xl px-6 pb-16 md:pb-20">
+    <section className="mx-auto max-w-6xl px-4 pb-10 md:pb-14">
       <Reveal>
         <div className="flex items-end justify-between gap-4">
           <div>
@@ -23,7 +23,7 @@ export function FeaturedProducts() {
             </p>
           </div>
           <Link
-            href="/spices"
+            href="/#spices"
             className="group hidden shrink-0 items-center gap-1.5 text-sm font-medium text-forest sm:inline-flex"
           >
             View All
